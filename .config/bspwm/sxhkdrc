@@ -1,43 +1,43 @@
 super + b
-	 firefox-esr
-
-super + shift + b
-	firefox-esr -private-window
+	 google-chrome
 
 super + Return
-	tilix
+	alacritty
 
 # rofi launchers
-super + space
+super + shift + Return
    	rofi -show drun -modi drun -line-padding 4 -hide-scrollbar -show-icons 
    	
-super + shift + Return
-    kitty
+super + b
+	rofi-bluetooth
+
+super + shift + e
+	rofi -show emoji
+
+super + shift + w
+	/home/fred/scripts/wifimenu
+
+super + shift + x
+	rofi -show calc -modi calc -no-show-match -no-sort
+
+super + shift + q
+	rofi -show power-menu -modi power-menu:/home/fred/scripts/powermenu
 	
 # help with shortcuts
 super + h
-	tilix -e ~/.config/bspwm/keyhelper.sh
+	alacritty -e ~/.config/bspwm/keyhelper.sh
 
 # application launchers
 
-super + f
-	thunar
+super + shift + f
+	alacritty -e ranger
 
-super + e 	
-	geany
-
-super + g
-	gimp
+super + x
+	clipmenu
 
 super + v
-   tilix -e pulsemixer
+   alacritty -e pulsemixer
 
-	
-super + d
-	Discord
-
-super + o
-	obs
 
 # set the window state
 super + shift + {t,s,f}
@@ -51,10 +51,7 @@ super + shift + r
 	bspc wm -r; notify-send 'bspwm' 'Restarted'
 
 ## windows keybindings
-super + shift + q
-	bspc quit
-
-super + q
+super + shift + c
 	bspc node -c
 
 super + i
@@ -110,13 +107,3 @@ super + @Print
 @Print
 	scrot -e 'mv $f ~/Screenshots'; \
 	notify-send 'Scrot' 'Image saved to ~/Screenshots'
-	
-## redshift
-super + alt + r
-	~/scripts/redshift-on
-	
-super + alt + b
-	~/scripts/redshift-off
-    
-super + @equal
-	bspc query -N -d | xargs -I % bspc node % -B

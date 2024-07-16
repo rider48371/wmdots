@@ -1,7 +1,7 @@
 BSPWM KEY BINDINGS
 ------------------
-Super + Space --- Rofi Menu
-Super + q --- Close window
+Super + x --- Clipmenu
+Super + Shift + c --- Close window
 Super + Right --- Change Focus Right
 Super + Left --- Change Focus Left
 Super + Up --- Change Focus Up
@@ -15,11 +15,18 @@ Super + Ctrl + Right --- Resize Right
 Super + Ctrl + Up --- Resize Up 
 Super + Ctrl + Down --- Resize Down
 
-Super + Shift + q --- Quit BSPWM
+Super + Shift + q --- Powermenu
 Super + Shift + r --- Restart BSPWM
 Super + ESC --- Restart SXHKD
 Super + h --- This screen
 
+ROFI MENUS
+----------
+Super + Shift + Return --- Rofi Menu
+Super + b --- Rofi Bluetooth
+Super + Shift + e --- Rofi Emoji Picker
+Super + Shift + w --- Rofi Wifi Picker
+Super + Shift + x --- Rofi Calculator
 BSPWM TAG BINDINGS
 ----------------
 Super + (1-9,0) --- Switch to tag (workspace 1-10)
@@ -27,13 +34,9 @@ Super + Shift + (1-9,0) ---  Move and Focus Window to tag (workspace 1-10)
 	
 SXHKD KEY BINDINGS
 ------------------
-Super + Space --- Rofi Menu
-Super + Return --- Tilix
-Super + Shift + Return --- Kitty (floating)
-Super + b --- Firefox-ESR
-Super + Shift + b --- Firefox-ESR -private-window
-Super + f --- Thunar
-Super + e --- Geany
+Super + Return --- Alacritty
+Super + Shift + b --- Google-Chrome
+Super + Shift + f --- Ranger
 Super + v --- Pulsemixer
 
 AUDIO
@@ -47,8 +50,5 @@ SCROT
 Super + @Print --- Select Rectangle Screenshot
 @Print --- Fullscreen Screenshot
 
-REDSHIFT
---------
-Super + Alt + r --- Redshift On (night)
-Super + Alt + b --- Redshift off (daytime)
+
 

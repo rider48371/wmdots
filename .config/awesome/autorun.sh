@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
 # background
-feh --bg-fill ~/.config/backgrounds/wallhaven-3l6g83_3440x1440.png &
+feh --bg-fill --randomize ~/.config/backgrounds/* &
 
 # compositor
-picom --animations -b &
+picom &
 
 # Notifications
 dunst &
+
+lxsession &
+
+~/Documents/onedrive &
 
