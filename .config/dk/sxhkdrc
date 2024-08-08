@@ -1,33 +1,26 @@
-# example sxhkdrc for use with dk
-#########################################################
-
-# launcher
-super + p
-	dmenu_run
-	
 # rofi launcher
-super + space
+super + shift + Return
    	rofi -show drun -modi drun -line-padding 4 -hide-scrollbar -show-icons
    	
 super + h
-	tilix -e ~/.config/dk/keyhelper.sh
+	alacritty -e ~/.config/dk/keyhelper.sh
 	
-super + b
-	firefox-esr
-
-super + shift + b
-	firefox-esr -private-window
-
-super + e
-	geany
-
-super + f
-	thunar
+super + shift + f
+	alacritty -e ranger
 
 # terminal
 super + Return
-	tilix
+	alacritty
 
+# Applications Launchers
+super + shift + b
+	google-chrome
+
+super + shift + m
+	caprine
+
+super + shift + t
+	thunderbird
 
 #########
 # Scrot #
@@ -39,14 +32,6 @@ super + @Print
 @Print
 	scrot -e 'mv $f ~/Screenshots'; \
 	notify-send 'Scrot' 'Image saved to ~/Screenshots'
-	
-## redshift
-super + alt + r
-	~/scripts/redshift-on
-	
-super + alt + b
-	~/scripts/redshift-off
-	
 	
 # dedicated volume keys
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
@@ -76,9 +61,9 @@ super + m
 super + Escape
 	pkill -USR1 -x sxhkd;notify-send 'sxhkd' 'Reloaded config'
 
-# quit dk
+# powermenu
 super + shift + q
-	dkcmd exit
+	/home/fred/scripts/powermenu
 
 # reload dkrc
 super + shift + r

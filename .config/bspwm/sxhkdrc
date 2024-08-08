@@ -1,5 +1,11 @@
 super + shift + b
 	 google-chrome
+	 
+super + shift + m
+	caprine
+
+super + shift + t
+	thunderbird
 
 super + Return
 	alacritty

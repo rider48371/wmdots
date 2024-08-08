@@ -1,18 +1,19 @@
 
 # Autostart applications
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 # bar start
 ~/.config/i3/polybar-i3 &
 
 # wallpaper
-feh --bg-fill ~/.config/backgrounds/wallhaven-578rw7_3440x1440.png &
+feh --bg-fill --randomize ~/.config/backgrounds/* &
 
 # compositor and notifications
-picom --animations -b &
-# numlockx on &
+picom  &
+numlockx on &
 dunst &
-# blueman-applet &
+blueman-applet &
+lxsession &
+~/Documents/onedrive &
 
 # sxhkd
 sxhkd -c ~/.config/i3/sxhkdrc &

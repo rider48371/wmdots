@@ -10,6 +10,6 @@ picom &
 dunst &
 
 lxsession &
-
+numlockx on &
 ~/Documents/onedrive &
 

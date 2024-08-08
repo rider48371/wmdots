@@ -1,22 +1,25 @@
-super + b
-	 firefox-esr
-
-super + shift + b
-	firefox-esr -private-window
-
-super + Return
-	tilix
-
 # rofi launchers
 
 super + Escape
 	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
 	
-super + space
-   	rofi -show drun -modi drun -line-padding 4 -hide-scrollbar -show-icons
-   	
 super + shift + Return
-    kitty
+   	rofi -show drun -modi drun -line-padding 4 -hide-scrollbar -show-icons
+
+super + b
+	rofi-bluetooth
+
+super + shift + e
+	rofi -show emoji
+
+super + shift + w
+	/home/fred/scripts/wifimenu
+
+super + shift + x
+	rofi -show calc -modi calc -no-show-match -no-sort
+
+super + shift + q
+	rofi -show power-menu -modi power-menu:/home/fred/scripts/powermenu
 	
 # help with shortcuts
 super + h
@@ -24,26 +27,27 @@ super + h
 
 # application launchers
 
-super + f
-	thunar
+super + Return
+	alacritty
 
-super + e 	
-	geany
+super + shift + b
+	 google-chrome
 
-super + g
-	gimp
+super + shift + f
+	alacritty -e ranger
 
 super + v
-   tilix -e pulsemixer
+   alacritty -e pulsemixer
 
-	
-super + d
-	Discord
+super + x
+	clipmenu
 
-super + o
-	obs
- 
- 
+super + shift + m
+	caprine
+
+super + shift + t
+	thunderbird
+
 #########
 # Scrot #
 #########
@@ -55,13 +59,6 @@ super + @Print
 	scrot -e 'mv $f ~/Screenshots'; \
 	notify-send 'Scrot' 'Image saved to ~/Screenshots'
 	
-## redshift
-super + alt + r
-	~/scripts/redshift-on
-	
-super + alt + b
-	~/scripts/redshift-off
-
 #workspaces
 
 super + {1-9,0}
@@ -120,14 +117,12 @@ super + control + space
 
 super + alt + a
     i3-msg focus parent
-    
-super + shift + q
-     i3-msg exit
 
-super + q
-    i3-msg kill
 
 super + shift + c
+    i3-msg kill
+
+super + c
     i3-msg reload
 
 super + shift + r

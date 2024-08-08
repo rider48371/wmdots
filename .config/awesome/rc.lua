@@ -354,8 +354,8 @@ globalkeys = gears.table.join(
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Shift" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
-              {description = "quit awesome", group = "awesome"}),
+    awful.key({ modkey, "Shift"   }, "q", function () awful.util.spawn("rofi -show power-menu -modi power-menu:/home/fred/scripts/powermenu"),
+              {description = "powermenu", group = "launcher"}),
 
     awful.key({ modkey,  "Control"  }, "Right",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -389,6 +389,12 @@ awful.key({ modkey, "Shift" }, "b",     function () awful.util.spawn("google-chr
               
 awful.key({ modkey, "Shift" }, "f",     function () awful.util.spawn("alacritty -e ranger") end,
               {description = "open ranger", group = "launcher"}), 
+
+awful.key({ modkey, "Shift" }, "m",     function () awful.util.spawn("caprine") end,
+              {description = "open messenger", group = "launcher"}),
+
+awful.key({ modkey, "Shift" }, "t",     function () awful.util.spawn("thunderbird") end,
+              {description = "open thunderbird", group = "launcher"}),
               
 awful.key({ modkey }, "o", function ()
     -- Switch to tag 9
@@ -405,6 +411,15 @@ awful.key({ modkey, "Shift" }, "e",     function()awful.util.spawn("rofi -show e
 
 awful.key({ modkey }, "b",      function () awful.util.spawn("rofi-bluetooth") end,
               {description = "rofi bluetooth", group = "launcher"}),
+
+awful.key({ modkey, "Shift" }, "w",      function () awful.util.spawn("/home/fred/scripts/wifimenu") end,
+              {description = "wifimenu", group = "launcher"}),
+
+awful.key({ modkey, "Shift"}, "x",      function () awful.util.spawn("rofi -show calc -modi calc -no-show-match -no-sort") end,
+              {description = "rofi calc", group = "launcher"}),
+
+awful.key({ modkey }, "x",      function () awful.util.spawn("clipmenu") end,
+              {description = "rofi clipmenu", group = "launcher"}),
               
 awful.key({ }, "Print",      function () awful.util.spawn("flameshot screen") end,
               {description = "screenshot", group = "launcher"}), 
@@ -445,7 +460,7 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey,  		  }, "q",      function (c) c:kill()                         end,
+    awful.key({ modkey, "Shift" }, "c",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
