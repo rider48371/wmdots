@@ -56,8 +56,8 @@ beautiful.init("~/.config/awesome/theme.lua")
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "tilix"
-editor = os.getenv("EDITOR") or "editor"
+terminal = "alacritty"
+editor = nvim
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -384,32 +384,27 @@ globalkeys = gears.table.join(
               
 -- start application keybinds
    
-awful.key({ modkey }, "b",     function () awful.util.spawn("firefox-esr") end,
-              {description = "open firefox", group = "launcher"}),
+awful.key({ modkey, "Shift" }, "b",     function () awful.util.spawn("google-chrome") end,
+              {description = "open chrome", group = "launcher"}),
               
-awful.key({ modkey }, "f",     function () awful.util.spawn("thunar") end,
-              {description = "open thunar", group = "launcher"}), 
-              
-awful.key({ modkey }, "d",     function () awful.util.spawn("Discord") end,
-              {description = "open discord", group = "launcher"}),
+awful.key({ modkey, "Shift" }, "f",     function () awful.util.spawn("alacritty -e ranger") end,
+              {description = "open ranger", group = "launcher"}), 
               
 awful.key({ modkey }, "o", function ()
     -- Switch to tag 9
     local tag = awful.screen.focused().tags[9]
     if tag then
         tag:view_only()
-    end
-
-    -- Launch OBS
-    awful.util.spawn("obs")
-end, {description = "open obs", group = "launcher"}),
-
+    end 
               
-awful.key({ modkey }, "e",     function () awful.util.spawn("geany") end,
-              {description = "open geany", group = "launcher"}),  
-              
-awful.key({ modkey }, "space",     function () awful.util.spawn("rofi -show drun -modi drun -line-padding 4 -hide-scrollbar -show-icons") end,
+awful.key({ modkey, "Shift" }, "Return",     function () awful.util.spawn("rofi -show drun -modi drun -line-padding 4 -hide-scrollbar -show-icons") end,
               {description = "rofi menu", group = "launcher"}),
+
+awful.key({ modkey, "Shift" }, "e",     function()awful.util.spawn("rofi -show emoji") end,
+              {description = "rofi emoji", group = "launcher"}),
+
+awful.key({ modkey }, "b",      function () awful.util.spawn("rofi-bluetooth") end,
+              {description = "rofi bluetooth", group = "launcher"}),
               
 awful.key({ }, "Print",      function () awful.util.spawn("flameshot screen") end,
               {description = "screenshot", group = "launcher"}), 
