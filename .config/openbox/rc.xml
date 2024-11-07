@@ -117,16 +117,16 @@
     <number>10</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>WEB</name>
-      <name>DEV</name>
-      <name>DIR</name>
-      <name>TXT</name>
-      <name>PAD</name>
-      <name>MUS</name>
-      <name>VID</name>
-      <name>GFX</name>
-      <name>DIS</name>
-      <name>OBS</name>
+      <name>Alacritty</name>
+      <name>Chrome</name>
+      <name>Chat</name>
+      <name>Music</name>
+      <name>Video</name>
+      <name>Email</name>
+      <name>Code</name>
+      <name>8</name>
+      <name>9</name>
+      <name>10</name>
     </names>
     <popupTime>0</popupTime>
     <!-- The number of milliseconds to show the popup for when switching

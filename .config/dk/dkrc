@@ -11,6 +11,7 @@ dunst &
 picom --animations -b &
 feh --bg-fill ~/.config/backgrounds/wallhaven-85erok_3440x1440.png &
 ~/.config/dk/polybar-dk &
+~/.local/bin/onedrive &
 
 # (re)load sxhkd for keybinds
 if hash sxhkd >/dev/null 2>&1; then

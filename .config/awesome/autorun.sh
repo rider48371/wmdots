@@ -11,5 +11,5 @@ dunst &
 
 lxsession &
 numlockx on &
-~/Documents/onedrive &
+~/.local/bin/onedrive &
 
